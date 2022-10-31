@@ -159,7 +159,7 @@ func ListCourses() ([]MSDSCourse, error) {
 	}
 	defer db.Close()
 
-	rows, err := db.Query(`SELECT "cid","cname","cprereq")
+	rows, err := db.Query(`SELECT "cid","cname","cprereq"
 		FROM "MSDSCourse","MSDSCourseCatalog"
 		WHERE MSDSCourse.id = MSDSCourseCatalog.userid`)
 	if err != nil {
